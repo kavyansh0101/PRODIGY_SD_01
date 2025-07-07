@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main()
+{
+    float temp,celcius,fahrenheit,kelvin;
+    char unit;
+    
+    printf("Enter a Temperature and Temperature unit:");
+    scanf("%f %c",&temp,&unit);
+   
+    
+    if(unit=='C'||unit=='c')
+{
+    celcius=temp;
+    fahrenheit = (celcius * 9/5)+32;
+    kelvin = (celcius + 273.15);
+    
+ printf("Temperature in Celcius is: %.f°C \n",celcius);
+ printf("Temperatue in fahrenheit is: %.f°F \n",fahrenheit);
+ printf("Temperatue in Kelvin is: %.2f°K \n",kelvin);
+ }
+ else if(unit=='F'||unit=='f')
+ {
+     fahrenheit=temp;
+     celcius = (fahrenheit - 32)*5/9;
+     kelvin = (fahrenheit - 32)*5/9 + 273.15;
+     
+ printf("Temperature in Fahrenheit is: %.f°F \n",fahrenheit);
+ printf("Temperatue in Celcius is: %.f°C \n",celcius);
+ printf("Temperatue in Kelvin is: %.2f°K \n",kelvin);
+      }
+ else if(unit=='K'||unit=='k')
+ {
+     kelvin=temp;
+     celcius = (kelvin - 273.15);
+     fahrenheit = (kelvin - 273.15) * 9/5 + 32;
+     
+ printf("Temperature in Kelvin is: %.2f°K \n",kelvin);
+ printf("Temperatue in Celcius is: %.f°C \n",celcius);
+ printf("Temperatue in Fahrenheit is: %.f°F \n",fahrenheit);
+      }
+ else
+ {
+     printf("Invalid Temperature");
+ }
+    return 0;
+}
